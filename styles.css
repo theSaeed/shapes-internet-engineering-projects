@@ -1,0 +1,374 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Lobster', cursive;
+}
+
+html {
+    background-color: black;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.body {
+    padding-top: 8em;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    transition: padding-left 0.2s ease-out, padding-right 0.2s ease-out;
+}
+@media only screen and (max-width: 700px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#header div {
+    display: inline;
+    position: absolute;
+}
+
+#header-bg {
+    width: 100%;
+    height: 6em;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(3em) contrast(150%) saturate(66%);
+    backdrop-filter: blur(3em) contrast(150%) saturate(66%);
+    transition: height 0.3s ease-out;
+}
+@media only screen and (max-width: 700px) {
+    #header-bg {
+        height: 10em;
+    }
+}
+
+#header .container {
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 4em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    font-size: 1.5em;
+    transition: height 0.3s ease-out;
+}
+@media only screen and (max-width: 700px) {
+    #header .container {
+        height: 8em;
+    }
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+@media only screen and (max-width: 1080px) {
+    .right {
+        float: left;
+    }
+}
+
+.clear {
+    clear: both;
+}
+
+.image-container {
+    width: 540px;
+    height: 540px;
+    /* clip-path: rect(50%,100%,100%,0); */
+}
+@media only screen and (max-width: 1080px) {
+    .image-container {
+        margin-left: calc(50% - 270px);
+        width: 540px;
+        height: 540px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .image-container {
+        margin: auto;
+        width: 100%;
+        height: calc(100vw - 80px);
+    }
+}
+
+.image {
+    position: relative;
+    width: 160%;
+    left: -30%;
+    top: -30%;
+    z-index: -1;
+}
+
+.row {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    width: calc(100% - 540px);
+    height: 540px;
+    position: relative;
+    align-items: center;
+}
+@media only screen and (max-width: 1080px) {
+    .content {
+        margin-top: -70px;
+        margin-bottom: 100px;
+        width: 100%;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .content {
+        margin-top: -15vw;
+    }
+}
+
+.content h2 {
+    font-size: 5em;
+    margin-bottom: 0.25em;
+}
+@media only screen and (max-width: 700px) {
+    .content h2 {
+        margin-top: 0.25em;
+        font-size: 4em;
+    }
+}
+
+.content p {
+    font-family: 'Yaldevi', sans-serif;
+    font-size: 1.25em;
+    text-align: justify;
+}
+
+#triangle-header {
+    /* background-color: #FF4C8E;
+    background-image: linear-gradient(45deg, #B20040, #FF4C8E);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; */
+    color: white;
+    text-shadow:
+    0 0 7px #FF4C8E,
+    0 0 10px #FF4C8E,
+    0 0 21px #FF4C8E,
+    0 0 42px #FF4C8E,
+    0 0 82px #FF4C8E,
+    0 0 92px #FF4C8E;
+}
+#nav-triangle {
+    filter: drop-shadow(0 0 0px #FF4C8E)
+    drop-shadow(0 0 0px #FF4C8E)
+    drop-shadow(0 0 0px #FF4C8E)
+    drop-shadow(0 0 0px #FF4C8E)
+    drop-shadow(0 0 0px #FF4C8E)
+    drop-shadow(0 0 0px #FF4C8E);
+}
+#nav-triangle:hover {
+    filter: drop-shadow(0 0 7px #FF4C8E)
+    drop-shadow(0 0 10px #FF4C8E)
+    drop-shadow(0 0 21px #FF4C8E)
+    drop-shadow(0 0 42px #FF4C8E)
+    drop-shadow(0 0 82px #FF4C8E)
+    drop-shadow(0 0 92px #FF4C8E);
+}
+
+#square-header {
+    /* background-color: #4CBEFF;
+    background-image: linear-gradient(45deg, #0072B2, #4CBEFF);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; */
+    color: white;
+    text-shadow:
+    0 0 7px #4CBEFF,
+    0 0 10px #4CBEFF,
+    0 0 21px #4CBEFF,
+    0 0 42px #4CBEFF,
+    0 0 82px #4CBEFF,
+    0 0 92px #4CBEFF;
+}
+#nav-square {
+    filter: drop-shadow(0 0 0px #4CBEFF)
+    drop-shadow(0 0 0px #4CBEFF)
+    drop-shadow(0 0 0px #4CBEFF)
+    drop-shadow(0 0 0px #4CBEFF)
+    drop-shadow(0 0 0px #4CBEFF)
+    drop-shadow(0 0 0px #4CBEFF);
+}
+#nav-square:hover {
+    filter: drop-shadow(0 0 7px #4CBEFF)
+    drop-shadow(0 0 10px #4CBEFF)
+    drop-shadow(0 0 21px #4CBEFF)
+    drop-shadow(0 0 42px #4CBEFF)
+    drop-shadow(0 0 82px #4CBEFF)
+    drop-shadow(0 0 92px #4CBEFF);
+}
+
+#circle-header {
+    /* background-color: #4CFFA9;
+    background-image: linear-gradient(45deg, #00B25C, #4CFFA9);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; */
+    color: white;
+    text-shadow:
+    0 0 7px #4CFFA9,
+    0 0 10px #4CFFA9,
+    0 0 21px #4CFFA9,
+    0 0 42px #4CFFA9,
+    0 0 82px #4CFFA9,
+    0 0 92px #4CFFA9;
+}
+#nav-circle {
+    filter: drop-shadow(0 0 0px #4CFFA9)
+    drop-shadow(0 0 0px #4CFFA9)
+    drop-shadow(0 0 0px #4CFFA9)
+    drop-shadow(0 0 0px #4CFFA9)
+    drop-shadow(0 0 0px #4CFFA9)
+    drop-shadow(0 0 0px #4CFFA9);
+}
+#nav-circle:hover {
+    filter: drop-shadow(0 0 7px #4CFFA9)
+    drop-shadow(0 0 10px #4CFFA9)
+    drop-shadow(0 0 21px #4CFFA9)
+    drop-shadow(0 0 42px #4CFFA9)
+    drop-shadow(0 0 82px #4CFFA9)
+    drop-shadow(0 0 92px #4CFFA9);
+}
+
+#rectangle-header {
+    /* background-color: #FFCD4C;
+    background-image: linear-gradient(45deg, #B28000, #FFCD4C);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent; */
+    color: white;
+    text-shadow:
+    0 0 7px #FFCD4C,
+    0 0 10px #FFCD4C,
+    0 0 21px #FFCD4C,
+    0 0 42px #FFCD4C,
+    0 0 82px #FFCD4C,
+    0 0 92px #FFCD4C;
+}
+#nav-rectangle {
+    filter: drop-shadow(0 0 0px #FFCD4C)
+    drop-shadow(0 0 0px #FFCD4C)
+    drop-shadow(0 0 0px #FFCD4C)
+    drop-shadow(0 0 0px #FFCD4C)
+    drop-shadow(0 0 0px #FFCD4C)
+    drop-shadow(0 0 0px #FFCD4C);
+}
+#nav-rectangle:hover {
+    filter: drop-shadow(0 0 7px #FFCD4C)
+    drop-shadow(0 0 10px #FFCD4C)
+    drop-shadow(0 0 21px #FFCD4C)
+    drop-shadow(0 0 42px #FFCD4C)
+    drop-shadow(0 0 82px #FFCD4C)
+    drop-shadow(0 0 92px #FFCD4C);
+}
+
+#designer {
+    padding-top: 8em;
+    text-align: center;
+}
+#designer p:nth-child(1) {
+    opacity: 0.75;
+    font-size: 1.5em;
+}
+#designer p:nth-child(2) {
+    opacity: 1;
+    font-size: 2em;
+}
+
+#date p{
+    padding-top: 1em;
+    padding-bottom: 10em;
+    text-align: center;
+    font-family: 'Yaldevi', sans-serif;
+    opacity: 0.5;
+}
+
+#title {
+    /* display: inline-block; */
+    position: relative;
+    width: 5.5em;
+    transition: width 0.3s ease-out;
+}
+@media only screen and (max-width: 700px) {
+    #title{
+        width: calc(100% - 80px);
+    }
+}
+
+#title h1{
+    display: flex;
+    justify-content: center;
+}
+
+#navbar {
+    /* display: inline-block; */
+    right: 0;
+    top: 0.75em;
+    width: 15.75em;
+    position: relative;
+    transition: width 0.3s ease-out, top 0.3s ease-out;
+}
+#navbar ul{
+    height: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+#navbar li {
+    display: inline;
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+    opacity: 0.25;    
+    transition: opacity 0.2s ease-out, filter 0.2s ease-out;
+}
+#navbar li:hover {
+    opacity: 1;
+    transition: opacity 0.1s ease-out, filter 1s ease-out;
+}
+#navbar img {
+    height: 1em;
+}
+@media only screen and (max-width: 700px) {
+    #navbar {
+        width: 100%;
+        top: 3.75em;
+    }
+}
